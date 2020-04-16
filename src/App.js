@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react'
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import uuid from 'uuid';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import TodoInput from './Components/TodoInput';
+import TodoList from "./Components/TodoList";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello from app</h1>
-    </div>
-  );
+ class App extends Component {
+  render() {
+    return (
+      <div>
+        <TodoInput/>
+        <TodoList/>
+      </div>
+    )
+  }
 }
 
 export default App;
