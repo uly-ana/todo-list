@@ -6,7 +6,7 @@ export default class TodoList extends Component {
         return (
             <section>
                 <h2>todo list</h2>
-                <Item/>
+                <Item />
             </section>
         )
     }
