@@ -7,7 +7,7 @@ import TodoList from "./Components/TodoList";
 
  class App extends Component {
    state = {
-     items: [ ],
+     items: [],
      id: uuidv4(),
      item: "",
      editItem: false,
@@ -24,7 +24,7 @@ import TodoList from "./Components/TodoList";
       const newItem = {
         id: this.state.id,
         title: this.state.item
-      }
+      };
       const updatedItems = [...this.state.items, newItem];
 
       this.setState({
@@ -40,7 +40,7 @@ import TodoList from "./Components/TodoList";
      });
    };
    handleDelete = id => {
-    const filteredItems = this.state.items(item => 
+    const filteredItems = this.state.items.filter(item => 
       item.id !== id);
       this.setState({
         items: filteredItems
